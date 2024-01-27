@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: it doesn t take the same time in sorted and unsorted cases , bcz it s o (n^2) when it s unsorted and o (n ) when it s sorted 
+
+sort2 uses: merge sort
+
+How do you know?: it takes the smallest time in all cases with all sizes , and when the numbers is sorted it takes aprroxmatily the same time as when it is unsorted bcz it s o (n log n ) and omega (n log n )
+
+sort3 uses: selection sort
+
+How do you know?: it takes long time , and when the numbers is sorted it takes aprroxmatily the same time as when it is unsorted because it s o (n^2) and omega (n^2)
