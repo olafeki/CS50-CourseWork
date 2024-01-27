@@ -1,0 +1,35 @@
+div {
+    width: auto;
+    text-align: left ;
+    padding: 10px;
+    border: 5px ;
+    border-color: black;
+    }
+    .img {
+    max-width: 40%;
+    height: auto;
+    }
+    .img2 {
+        max-width: 100%;
+        height: 100%;
+        }
+        a {
+            color:#ff0000;
+            text-decoration:none;
+            font-size: 30px;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        #check {
+            border:4px dotted blue ;
+            text-align : left ;
+
+        }
+        div a {
+            font-weight: bold;
+            text-decoration:underline;
+        }
+        *{
+            font-family: "Lucida Console", "Courier New", monospace;
+        }

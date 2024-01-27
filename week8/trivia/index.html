@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function getInputValue(){
+            // Selecting the input element and get its value
+            var inputVal = document.getElementById("input").value;
+            console.log(inputval);
+            }
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function Listen() {
+                console.log("hi");
+                let buttons = document.querySelectorAll('.button');
+                let btn = document.querySelector('#check');
+                let textbox=document.querySelector('#input');
+                let repeated1 =false ;
+                let repeated2 =false ;
+
+                  for (x of buttons){
+                    x.addEventListener('click',event => multiplechoice(event));
+                  }
+
+
+        function multiplechoice(event)
+            {
+                if (repeated1)
+                    {
+                        return ;
+                    }
+               console.log(event);
+               const currentbtnelement = event.target ;
+
+               if(currentbtnelement.classList.contains('correct')) {
+                currentbtnelement.style.background='green';
+                document.getElementById("demo").innerHTML = "correct";
+               }
+               else {
+                currentbtnelement.style.background='red';
+                document.getElementById("demo").innerHTML = "incorrect";
+               }
+              repeated1 =true;
+            }
+
+
+
+
+                btn.addEventListener('click', function(evt){
+                    if (repeated2)
+                    {
+                        return ;
+                    }
+                    var text =textbox.value;
+                    var result = text.toLowerCase();
+                    if(result == "switzer land")
+                    {
+                        textbox.style.background='green';
+                document.getElementById("nemo").innerHTML = "correct";
+                    }
+                    else
+                    {
+                        textbox.style.background='red';
+                document.getElementById("nemo").innerHTML = "incorrect";
+                    }
+                    repeated2=true;
+
+            });
+
+            });
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <button  id ="1" class="button incorrect">6 people per 1 sheep</button>
+                <button  id ="2" class="button incorrect">3 people per 1 sheep</button>
+                <button  id ="3"  class="button correct">1 people per 1 sheep</button>
+                <h4 id="demo"></h4>
+
+            </div>
+
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>in which country is illegal only one guinea pig, as a lone  guinea pig might get lonely ?</h3>
+                <input   id ="input"  type="text">
+                <button  id ="check"  class="input " >Check Answer</button>
+                <h4 id="nemo"></h4>
+            </div>
+        </div>
+    </body>
+</html>
