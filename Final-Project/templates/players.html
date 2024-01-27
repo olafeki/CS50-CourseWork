@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Players
+{% endblock %}
+
+{% block main %}
+<style>
+body {
+    background-image: url('https://cdn.wallpapersafari.com/91/11/9rcuJ2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.div {
+  width: 800px;
+  height:225px;
+  border: 8px solid purple;
+  padding: 50px;
+  margin: 20px;
+  background-color: 	#E6E6FA;
+  margin-top:200px;
+  margin-left:262px;
+}
+</style>
+<div class="div">
+  <h1 class="font"> WHO IS THE BEST PLAYER ?!</h1>
+
+  <form action="/players" method="post">
+    <div class="row">
+      <div class="col">
+
+        <input type="text" id="name1" name="name1" class="form-control" placeholder="First Player">
+      </div>
+      <div class="col">
+        <input type="text" id="name2" name="name2" placeholder="Second Player"  class="form-control" >
+      </div>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-light">Compare !</button>
+  </form>
+  </div>
+{% endblock %}

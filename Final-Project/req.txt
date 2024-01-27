@@ -1,0 +1,85 @@
+ <p class="font" style="text-align:left">WHO IS THE BEST PLAYER ?! </p>
+    <p style="text-align:left; margin-left: 140px ; color:	#F5F5F5;">you can compare now !</p>
+    .font{
+
+    font-size: 35px;
+    color:	#F5F5F5;
+    font-family: "Gill Sans", sans-serif;
+    margin-top : 30px ;
+    }
+    <form action="/players" method="post" class="form1">
+    <div class="input-group mb-3">
+        <input type="text"  id="name1" name="name1" placeholder="Name" size="40" >
+    </div>
+
+    </form>
+    <form action="/players" method="post" class="form2">
+    <div class="input-group mb-3">
+      <input type="text" id="name2" name="name2" placeholder="Name" size="40" >
+    </div>
+    <div>
+      <button class="btn btn-light active" type="submit" size="60" style =" margin-right: 0px ">Compare</button>
+  </div>
+  </form>
+  ////////////////////////////////////////////
+  <style>
+    body {
+      background-image: url('https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/Sport/article-preview-epl-hero.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    form{
+        margin-top : 350px ;
+    }
+    .font{
+
+font-size: 35px;
+color:	#F5F5F5;
+font-family: "Gill Sans", sans-serif;
+margin-top : 30px ;
+}
+
+
+    </style>
+
+    <p class="font" style="text-align:left">WHO IS THE BEST PLAYER ?! </p>
+    <p style="text-align:left; margin-left: 140px ; color:	#F5F5F5;">you can compare now !</p>
+
+    <form action="/players" method="post" class="row">
+        <div class="col">
+          <input type="text"  id="name1" name="name1" placeholder="Name" size="40" >
+        </div>
+        <div class="col" >
+
+        </div>
+        <div class="col" >
+          <input type="text" id="name2" name="name2" placeholder="Name" size="40" >
+          <br>
+          <button class="btn btn-light active" type="submit" size="60" style="margin-left:10px">Compare</button>
+
+        </div>
+
+      </div>
+    </form>
+
+
+
+form{
+  margin-top:200px;
+}
+<a class="font">WHO IS THE BEST PLAYER ?!</a>
+
+
+<form action="/players" method="post">
+  <div class="row">
+    <div class="col">
+      <input type="text" id="name1" name="name1" class="form-control" placeholder="First Player">
+    </div>
+    <div class="col">
+      <input type="text" id="name2" name="name2" placeholder="Second Player"  class="form-control" >
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-light">Compare !</button>
+</form>

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Players
+{% endblock %}
+
+{% block main %}
+<style>
+body {
+    background-image: url('https://wallpaperaccess.com/full/7850957.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+.div {
+    width: 325px;
+    height:325px;
+    border: 8px solid white;
+    padding: 40px;
+    margin: 20px;
+    background-color: #FFFFFF;
+    margin-top:120px;
+    margin-left:500px;
+  }
+
+</style>
+
+  <div class="div">
+    <h1 class="font"> choose your favorite team </h1>
+    <br>
+
+    <form action="/teams" method="post">
+      <div class="row">
+        <input type="text" id="team" name="team" class="form-control" placeholder="Team" >
+      </div>
+      <br>
+      <button type="submit" class="btn btn-light">Show</button>
+    </form>
+    </div>
+  {% endblock %}
+

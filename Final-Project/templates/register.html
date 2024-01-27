@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<style>
+    html, body {
+    background-image: url('https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline;
+    justify-content: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    }
+    form {
+    border: 5px solid #f1f1f1;
+    }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    .icon {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    color: #4B0082;
+    }
+    button {
+    background-color: #4B0082;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grab;
+    width: 48%;
+    }
+    h1 {
+    text-align:center;
+    font-size:18;
+    }
+    button:hover {
+    opacity: 0.8;
+    }
+    .formcontainer {
+    text-align: center;
+    margin: 5px 20px 6px;
+    }
+    .container {
+    padding: 0px 0;
+    text-align:left;
+    }
+    span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+    }
+    /* Change styles for span on extra small screens */
+    @media screen and (max-width: 150px) {
+    span.psw {
+    display:block ;
+    float: none\;
+    }}
+  </style>
+<form action="/register" method="post" ">
+    <h1>Register </h1>
+    <div class="icon">
+      <i class="fas fa-user-circle"></i>
+    </div>
+    <div class="formcontainer">
+    <div class="container">
+      <label for="username"><strong>Username</strong></label>
+      <input type="text" placeholder="Enter Username" autocomplete="off" autofocus  name="username" placeholder="Username" required>
+      <label for="password"><strong>Password</strong></label>
+      <input type="password" name="password" placeholder="Enter Password" autocomplete="off" autofocus required>
+      <label for="confirmation"><strong>Confirmation</strong></label>
+      <input type="password" name="confirmation" placeholder="Confirm Your Password" autocomplete="off" autofocus required>
+      </div>
+    <button type="submit"><strong>Register</strong></button>
+
+  </form>
+  {% endblock %}

@@ -1,0 +1,71 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    players
+{% endblock %}
+
+{% block main %}
+<style>
+
+body {
+      background-image: url('https://img.freepik.com/premium-vector/white-elegant-texture-background_23-2148445781.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+   form{
+        margin-top : 170px ;
+    }
+</style>
+<h1>Team</h1>
+<div class="table-responsive">
+<table class="table">
+    <thead>
+       <tr>
+
+
+           <th >Team_Name</th>
+           <th >Common_Name</th>
+           <th >Season</th>
+           <th >Country</th>
+           <th >Matches_Played</th>
+           <th >Wins</th>
+           <th >Draws</th>
+           <th >Losses</th>
+           <th >Points_Per_Game</th>
+           <th >League_Position</th>
+           <th >Performance_Rank</th>
+           <th >Goals_Scored</th>
+           <th >Clean_Sheets</th>
+
+
+       </tr>
+
+    </thead>
+    <tbody>
+    {% for row in teams_db %}
+
+           <tr>
+
+               <td>{{ row["team_name"] }}</td>
+               <td>{{ row["common_name"] }}</td>
+               <td>{{row["season"]}}</td>
+               <td>{{row["country"]}}</td>
+               <td>{{row["matches_played"]}}</td>
+               <td>{{row["wins"]}}</td>
+               <td>{{row["draws"]}}</td>
+               <td>{{row["losses"]}}</td>
+               <td>{{row["points_per_game"]}}</td>
+               <td>{{row["league_position"]}}</td>
+               <td>{{row["performance_rank"]}}</td>
+               <td>{{row["goals_scored"]}}</td>
+               <td>{{row["clean_sheets"]}}</td>
+
+           </tr>
+
+{% endfor %}
+    </tbody>
+    </table>
+</div>
+
+{% endblock %}

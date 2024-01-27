@@ -1,0 +1,25 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+
+
+    <table class="table ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="font2">team</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for row in teams %}
+          <tr>
+            <th scope="row">{{ row["player"] }}</th>
+          </tr>
+       {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,104 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    players
+{% endblock %}
+
+{% block main %}
+<style>
+
+body {
+      background-image: url('https://img.freepik.com/premium-vector/white-elegant-texture-background_23-2148445781.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+   form{
+        margin-top : 170px ;
+    }
+</style>
+<h1>Players</h1>
+<div  class="table-responsive">
+<table class="table">
+    <thead>
+       <tr>
+           <th >Name</th>
+           <th >Nationality</th>
+           <th >Age</th>
+           <th >Season</th>
+           <th >Position</th>
+           <th >Current_Club</th>
+           <th >Mins_Played</th>
+           <th >Goals</th>
+           <th >Penalty_Goals</th>
+           <th >Assists</th>
+           <th >Clean_Sheets</th>
+           <th >Yellow_card</th>
+           <th >Red_cards</th>
+           <th >Goals/Match</th>
+           <th >Assists/Match</th>
+       </tr>
+
+    </thead>
+    <tbody>
+    {% for row in db_INF_name1 %}
+
+           <tr>
+               <td>{{ row["full_name"] }}</td>
+               <td>{{ row["nationality"] }}</td>
+               <td>{{row["age"]}}</td>
+               <td>{{row["season"]}}</td>
+               <td>{{row["position"]}}</td>
+               <td>{{row["Current_Club"]}}</td>
+               <td>{{row["minutes_played_overall"]}}</td>
+               <td>{{row["goals_overall"]}}</td>
+               <td>{{row["penalty_goals"]}}</td>
+               <td>{{row["assists_overall"]}}</td>
+               <td>{{row["clean_sheets_overall"]}}</td>
+               <td>{{row["yellow_cards_overall"]}}</td>
+               <td>{{row["red_cards_overall"]}}</td>
+               <td>{{row["goals_per_90_overall"]}}</td>
+               <td>{{row["assists_per_90_overall"]}}</td>
+
+               <form action="/players2" method="post" >
+                <button name="add_player1" type="submit" value= "{{row["full_name"]}}">Add Player 1</button>
+                </form>
+
+           </tr>
+    {% endfor %}
+    {% for row in db_INF_name2 %}
+
+    <tr>
+        <td>{{ row["full_name"] }}</td>
+        <td>{{ row["nationality"] }}</td>
+        <td>{{row["age"]}}</td>
+        <td>{{row["season"]}}</td>
+        <td>{{row["position"]}}</td>
+        <td>{{row["Current_Club"]}}</td>
+        <td>{{row["minutes_played_overall"]}}</td>
+        <td>{{row["goals_overall"]}}</td>
+        <td>{{row["penalty_goals"]}}</td>
+        <td>{{row["assists_overall"]}}</td>
+        <td>{{row["clean_sheets_overall"]}}</td>
+        <td>{{row["yellow_cards_overall"]}}</td>
+        <td>{{row["red_cards_overall"]}}</td>
+        <td>{{row["goals_per_90_overall"]}}</td>
+        <td>{{row["assists_per_90_overall"]}}</td>
+        <form action="/players2" method="post" >
+
+            <button name="add_player2" type="submit">Add Player 2</button>
+            </form>
+    </tr>
+{% endfor %}
+    </tbody>
+    </table>
+</div>
+
+<div class="alert alert-success" role="alert">
+
+     {{winner}}
+  </div>
+
+
+
+{% endblock %}
